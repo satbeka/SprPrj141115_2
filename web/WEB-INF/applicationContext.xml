@@ -3,4 +3,47 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+       <!-- Definition for textEditor bean -->
+       <bean id="obligation" class="model.Obligation">
+              <property name="dt_begin" value=""/>
+              <property name="dt_end" value=""/>
+
+       </bean>
+
+       <bean id="owner" class="model.Owner">
+              <property name="id" value=""/>
+              <property name="addres" value=""/>
+              <property name="bin" value=""/>
+              <property name="inn" value=""/>
+              <property name="name" value=""/>
+              <property name="pers_jurd" value=""/>
+
+       </bean>
+
+       <bean id="akcia" class="model.Akcia">
+              <property name="price" value=""/>
+              <property name="privilig_notPrivilig" value=""/>
+              <property name="nin" value=""/>
+              <property name="nominal" value=""/>
+              <property name="owner" value=""/>
+       </bean>
+
+       <bean id="buyer" class="model.Buyer">
+              <property name="id" value=""/>
+              <property name="pers_jurd" value=""/>
+              <property name="addres" value=""/>
+              <property name="bin" value=""/>
+              <property name="inn" value=""/>
+              <property name="name" value=""/>
+
+       </bean>
+
+       <!-- Definition for spellChecker bean -->
+       <bean id="spellChecker" class="model.Market">
+              <property name="obligation" ref="obligation"></property>
+              <property name="akcia" ref="akcia"/>
+              <property name="buyer" ref="buyer"/>
+
+       </bean>
+
 </beans>

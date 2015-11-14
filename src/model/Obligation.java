@@ -7,11 +7,11 @@ public class Obligation {
     private Date dt_begin;
     private Date dt_end;
 
-    public Date getDt_beign() {
+    public Date getDt_begin() {
         return dt_begin;
     }
 
-    public void setDt_beign(Date dt_begin) {
+    public void setDt_begin(Date dt_begin) {
         this.dt_begin = dt_begin;
     }
 
